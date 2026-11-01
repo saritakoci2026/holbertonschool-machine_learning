@@ -27,3 +27,14 @@ class Normal:
             ) / len(data)
 
             self.stddev = float(variance ** 0.5)
+
+    def pdf(self, x):
+        """Calculate the PDF at a given x-value."""
+        pi = 3.1415926536
+        e = 2.7182818285
+
+        exponent = -0.5 * ((x - self.mean) / self.stddev) ** 2
+
+        return (e ** exponent) / (
+            self.stddev * (2 * pi) ** 0.5
+        )

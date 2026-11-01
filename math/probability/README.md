@@ -14,3 +14,6 @@ The class supports:
 - Calculating the standard deviation.
 - Initializing with predefined mean and standard deviation.
 - Validating input data and standard deviation.
+### 8. Normal PDF
+
+Added a `pdf` method to the `Normal` class to calculate the probability density function for a given x-value.
