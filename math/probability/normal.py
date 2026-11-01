@@ -46,3 +46,20 @@ class Normal:
     def x_value(self, z):
         """Calculate the x-value of a given z-score."""
         return z * self.stddev + self.mean
+
+    def cdf(self, x):
+        """Calculate the CDF at a given x-value."""
+        pi = 3.1415926536
+
+        z = (x - self.mean) / (self.stddev * 2 ** 0.5)
+
+        term = z
+        total = term
+
+        for n in range(1, 100):
+            term *= -(z ** 2) / n
+            total += term / (2 * n + 1)
+
+        erf = (2 / (pi ** 0.5)) * total
+
+        return 0.5 * (1 + erf)
