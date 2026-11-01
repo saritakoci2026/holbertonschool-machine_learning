@@ -17,3 +17,5 @@ The class supports:
 ### 8. Normal PDF
 
 Added a `pdf` method to the `Normal` class to calculate the probability density function for a given x-value.
+## Task 9: Normal CDF
+Added cdf(self, x) method to Normal class in normal.py.
